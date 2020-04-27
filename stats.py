@@ -23,18 +23,20 @@ for numbers in datainput:
     sqrdiastance = (numbers-mean)**2
     tsqrdistance += sqrdiastance
 std = sqrt(tsqrdistance/count)
-center = count / 2
+center = (count+1) / 2
 if center.is_integer() is True:
     center = count // 2
+    median = datainput [center]
 else:
-    center = int((int(center+1)+int(center-1))/2)
-median = datainput [center]
-print(f'count:{count}')
-print(f'Minimum:{min}')
-print(f'Maximum:{max}')
-print(f'Mean:{mean}')
-print(f'Std. dev:{std:.3f}')
-print(f'Median: {median}')
+    gcenter = int(round(center))
+    lcenter = int(gcenter - 1)
+    median = (datainput[gcenter-1] + datainput[lcenter-1])/2
+print(f'count:  {count}')
+print(f'Minimum:    {min}')
+print(f'Maximum:    {max}')
+print(f'Mean:   {mean}')
+print(f'Std. dev:   {std:.3f}')
+print(f'Median:  {median}')
 
 
 
