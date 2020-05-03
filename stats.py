@@ -38,7 +38,7 @@ print(f'Mean:   {mean}')
 print(f'Std. dev:   {std:.3f}')
 print(f'Median:  {median}')
 
-
+#OSFrog
 
 """
 python3 stats.py numbers.txt
