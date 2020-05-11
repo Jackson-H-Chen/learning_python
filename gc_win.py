@@ -3,23 +3,14 @@
 # Write a program that computes the GC fraction of a DNA sequence in a window
 # Window size is 11 nt
 # Output with 4 significant figures using whichever method you prefer
+# Use nested loops
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
-n = 0
-i = 0
-print("Frame Number", "Frame", "GC Fraction")
-for n in range (0, len(seq)-w+1, 1):
-    frame=seq[n:n+w]
-    gc_count = 0
-    all_count = 0
-    for i in range(len(frame)):
-        all_count += 1
-        nt = frame[i]
-        if nt == 'G' or nt == 'C': gc_count += 1
-        gc_frac = gc_count / all_count
-    print(f'{n} {frame} {gc_frac:.4f}')
+
+
 """
+python3 gc_win.py
 0 ACGACGCAGGA 0.6364
 1 CGACGCAGGAG 0.7273
 2 GACGCAGGAGG 0.7273
