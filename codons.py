@@ -5,7 +5,9 @@
 
 dna = 'ATAGCGAATATCTCTCATGAGAGGGAA'
 
-
+for i in range(0,len(dna)-3+1,3):
+    nmer = dna[i:i+3]
+    print(f'{nmer}')
 """
 python3 codons.py
 ATA
